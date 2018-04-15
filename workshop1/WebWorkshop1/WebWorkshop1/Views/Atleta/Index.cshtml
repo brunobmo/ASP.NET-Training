@@ -1,0 +1,30 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    <div> 
+        @using (Html.BeginForm("AdicionarAtleta", "Atleta", FormMethod.Post))
+        {
+            @Html.ValidationSummary(true)
+            <fieldset>
+                Nome: <input type="text" name="nome" required />
+                Data nascimento: <input type="date" name="data_nascimento" required />
+                <select name="genero">
+                    <option value="M">Masculino</option>
+                    <option value="F">Feminino</option>
+                </select>
+            </fieldset>
+            <input type="submit" value="Submit" />
+        }
+    </div>
+</body>
+</html>

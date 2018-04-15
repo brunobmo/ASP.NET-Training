@@ -1,0 +1,47 @@
+﻿@model IEnumerable<WebWorkshop1.Atleta>
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>verAtletas</title>
+</head>
+<body>
+    <div> 
+        <table class="table">
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.nome)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.data_nascimento)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.genero)
+                </th>
+            </tr>
+
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.nome)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.data_nascimento)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.genero)
+                    </td>
+                </tr>
+            }
+
+        </table>
+    </div>
+</body>
+</html>
