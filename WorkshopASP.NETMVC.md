@@ -31,7 +31,7 @@ Atleta Controller verAtletas method: slide 31
 View to print all Atletas: Slide 32
 [link to code!](https://gist.github.com/brunobmo/2d48274aa29a0ec80b3482e656611001)
 
-#H1 Workshop Part 2
+# Workshop Part 2
 
 
 
