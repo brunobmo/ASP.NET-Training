@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -18,7 +18,7 @@ namespace TodoApp
         public void ConfigureServices(IServiceCollection services)
         {
             /**SQL Server*/
-            var connection = @"Server=LAPTOP-7D49V42J;Database=aspNetCoreWorkshop2019;Trusted_Connection=True;ConnectRetryCount=0";
+            var connection = @"Server=XPTO;Database=aspNetCoreWorkshop2019;Trusted_Connection=True;ConnectRetryCount=0";
             services.AddDbContext<UserContext>(options => options.UseSqlServer(connection));
             /*SQL Server*/
             services.AddMvc();

@@ -17,7 +17,7 @@ namespace Workshop2019UMParte1
         // For more information on how to configure your application, visit https://go.microsoft.com/fwlink/?LinkID=398940
         public void ConfigureServices(IServiceCollection services)
         {
-            var connection = @"Server=LAPTOP-7D49V42J;Database=aspNetCoreWorkshop2019;Trusted_Connection=True;ConnectRetryCount=0";
+            var connection = @"Server=XPTO;Database=aspNetCoreWorkshop2019;Trusted_Connection=True;ConnectRetryCount=0";
             services.AddDbContext<UserContext>(options => options.UseSqlServer(connection));
 
             services.AddMvc();
