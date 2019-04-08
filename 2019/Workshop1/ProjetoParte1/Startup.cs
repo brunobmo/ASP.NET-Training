@@ -1,15 +1,13 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
-using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
-using TodoApp.Models;
 
-namespace TodoApp
+namespace Teste
 {
     public class Startup
     {
@@ -17,10 +15,6 @@ namespace TodoApp
         // For more information on how to configure your application, visit https://go.microsoft.com/fwlink/?LinkID=398940
         public void ConfigureServices(IServiceCollection services)
         {
-            /**SQL Server*/
-            var connection = @"Server=XPTO;Database=aspNetCoreWorkshop2019;Trusted_Connection=True;ConnectRetryCount=0";
-            services.AddDbContext<UserContext>(options => options.UseSqlServer(connection));
-            /*SQL Server*/
             services.AddMvc();
         }
 
@@ -31,7 +25,6 @@ namespace TodoApp
             {
                 app.UseDeveloperExceptionPage();
             }
-
             app.UseMvcWithDefaultRoute();
 
         }
