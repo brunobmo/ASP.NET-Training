@@ -1,0 +1,19 @@
+﻿@model IEnumerable<Workshop2019UMParte1.Models.User>
+
+@{
+    ViewData["Title"] = "getUsers";
+}
+
+<h1>getUsers</h1>
+
+<table>
+    <tr>
+        <td>Nome</td>
+    </tr>
+    @foreach (var user in Model)
+    {
+        <tr>
+            <td>@user.nome</td>
+        </tr>
+    }
+</table>
